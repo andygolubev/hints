@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
 sudo apt update
 sudo apt-get remove needrestart -y
@@ -7,7 +7,7 @@ sudo apt install xfce4 xfce4-goodies -y
 sudo apt install tightvncserver -y
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
 vncserver
 
