@@ -6,7 +6,9 @@ Setup VIM
 :set syntax on
 :set filetype=yaml
 :set tabstop=2
-
+:set scrolloff=5
+:set list   # show end of line
+:set ignorecase   # ignore case in search
 ```
 
 https://www.dbi-services.com/blog/vim-tips-tricks-for-the-kubernetes-cka-exam/
@@ -88,3 +90,39 @@ gv                              repeat selection
 shift + >                       tab the text
 
 Shift + H M L                   go to Top, Middle, Low
+
+Shift + {}                      go to the next paragraph
+
+Shift + A                       start edit at the end of the string
+Shift + I                       start edit from the beginning of the string
+
+Ctrl + v -> Shift + I           Multiline add
+
+dd                              delete line                               
+d^                              delete to the begining of the line
+d$                              delete to the end of the line
+d}                              dekete the paragraph
+
+dG                              delete to the end of the file
+
+x     delete hte symbol under the cursor
+
+dw
+db
+dW
+dB
+
+yy
+y^
+y$
+yG
+
+Y     copy the line
+
+p     paste in the line
+P     paste below
+
+r     replace the text
+cw    delete the end of the word and enter the INSERT mode
+
+*     seach for all words
