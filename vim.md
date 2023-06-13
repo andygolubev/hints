@@ -126,3 +126,33 @@ r     replace the text
 cw    delete the end of the word and enter the INSERT mode
 
 *     seach for all words
+
+
+s/the/THE           find and replace the first instance in this file
+
+%s/the/THE/g        find and replace ALL instance in ALL lines
+
+%s/the/THE/gc       find and replace ALL instance in ALL lines with confirtmation
+
+%s/the/THE/gci      find and replace ALL instance in ALL lines with confirtmation and CASE insensitive
+
+:shell              go to shell. then "exit"
+:! ls -ls           read a command inside vim
+:read ! ls -la      insert a content of the comand into the vim
+
+vsp                 vertical split
+ctrl + wr           switch view
+ctrl + ww           switch coursor
+
+sp                  split
+:new                new file
+:edit               edit file
+:exit               exit file
+
+:tabnew             create new tab
+gt                  switch between tabs
+
+:ls                 show buffers
+:buffers            show buffers
+
+:hide               hide changes (showen with + in the buffer list)
