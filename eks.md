@@ -19,3 +19,19 @@ eksctl version
 eksctl create cluster --node-type t3.medium --version 1.27 --nodes 3
 
 eksctl get cluster
+
+
+
+
+----------------------------------------
+
+S3BUCKETNAME=loki-bucket-2345234524352435
+AWSREGION=us-east-1
+
+Create S3
+
+aws s3api create-bucket --bucket $S3BUCKETNAME --region $AWSREGION
+
+Install HELM
+bash <(curl -fsSL  https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 --)
+
