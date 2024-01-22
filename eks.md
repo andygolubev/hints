@@ -35,3 +35,7 @@ aws s3api create-bucket --bucket $S3BUCKETNAME --region $AWSREGION
 Install HELM
 bash <(curl -fsSL  https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 --)
 
+Install Loki repo
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+
