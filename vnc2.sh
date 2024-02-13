@@ -13,7 +13,6 @@ vncserver
 
 vncserver -kill :1
 
-
 cat << EOF | tee ~/.vnc/xstartup
 #!/bin/bash
 xrdb $HOME/.Xresources
