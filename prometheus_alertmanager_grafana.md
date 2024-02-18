@@ -171,3 +171,4 @@ sudo /bin/systemctl enable grafana-server
 sudo /bin/systemctl start grafana-server
 
 Visit: hostip:3030
+Login and Pass: admin/admin
