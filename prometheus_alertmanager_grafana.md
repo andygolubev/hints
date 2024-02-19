@@ -172,3 +172,32 @@ sudo /bin/systemctl start grafana-server
 
 Visit: hostip:3030
 Login and Pass: admin/admin
+
+
+Add Endpoints
+Back in the monitoring server terminal, open the Prometheus configuration file:
+
+sudo vim /etc/prometheus/prometheus.yml
+At the end of the file, at the bottom of the scrape_configs section, add the Alertmanager endpoint (make sure it aligns with the - job_name: 'prometheus' line):
+
+- job_name: 'alertmanager'
+  static_configs:
+  - targets: ['localhost:9093']
+Beneath what you just added, add the Grafana endpoint (using the public IP address of the grafana server):
+
+- job_name: 'grafana'
+  static_configs:
+  - targets: ['<GRAFANA_IP_ADDRESS>:3000']
+Save and exit the file by pressing Escape followed by :wq.
+
+Restart Prometheus:
+
+sudo systemctl restart prometheus
+Check its status:
+
+sudo systemctl status prometheus
+Using the public IP address of the monitoring server, navigate to the Prometheus web UI in a new browser tab:http://<MONITORING_IP_ADDRESS>:9090.
+
+Click Status > Targets.
+
+Ensure all three endpoints are listed on the Targets page.
