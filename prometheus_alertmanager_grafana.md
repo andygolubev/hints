@@ -201,3 +201,18 @@ Using the public IP address of the monitoring server, navigate to the Prometheus
 Click Status > Targets.
 
 Ensure all three endpoints are listed on the Targets page.
+
+-----
+
+# cAdvisor
+
+sudo docker run \
+--volume=/:/rootfs:ro \
+--volume=/var/run:/var/run:ro \
+--volume=/sys:/sys:ro \
+--volume=/var/lib/docker/:/var/lib/docker:ro \
+--volume=/dev/disk/:/dev/disk:ro \
+--publish=8000:8080 \
+--detach=true \
+--name=cadvisor \
+google/cadvisor:latest
