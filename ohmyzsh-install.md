@@ -53,3 +53,12 @@ alias k="kubectl"
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ```
+
+
+Update Ghostly config:
+
+```
+# ghostty +list-themes
+theme = Catppuccin Mocha
+
+```
