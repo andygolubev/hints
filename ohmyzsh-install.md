@@ -59,6 +59,9 @@ Update Ghostly config:
 
 ```
 # ghostty +list-themes
-theme = Catppuccin Mocha
+# theme = Catppuccin Mocha
+# theme = Dayfox
+# theme = Flexoki Light
+theme = Xcode Light hc
 
 ```
