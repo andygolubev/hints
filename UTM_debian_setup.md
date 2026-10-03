@@ -6,12 +6,12 @@ Mac-style Cmd shortcuts
 
   1. Install keyd
 
-  sudo apt-get install -y keyd
+  ```sudo apt-get install -y keyd```
 
   ────────────────────────────────────────
 
   2. Write /etc/keyd/default.conf
-
+```
   sudo cat >/etc/keyd/default.conf <<'EOF'
   [ids]
   *
@@ -23,7 +23,7 @@ Mac-style Cmd shortcuts
   z = C-z
   a = C-a
   EOF
-
+```
   Rationale: Mac Command arrives as leftmeta. Copy/paste use Ctrl+Insert / Shift+Insert so Cmd+C copies in terminals instead of sending SIGINT.
 
   ────────────────────────────────────────
@@ -31,10 +31,10 @@ Mac-style Cmd shortcuts
   3. Enable keyd and reload config
 
   Debian may start keyd during install before the config exists. Always reload:
-
+```
   sudo systemctl enable --now keyd
   sudo keyd.rvaiya reload
-
+```
   On Debian the binary is keyd.rvaiya, not keyd.
 
   ────────────────────────────────────────
@@ -45,7 +45,7 @@ Mac-style Cmd shortcuts
 
   Optional monitor:
 
-  sudo keyd.rvaiya monitor
+  ```sudo keyd.rvaiya monitor```
 
   Press Command. You should see leftmeta down/up.
 
